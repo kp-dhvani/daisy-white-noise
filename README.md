@@ -2,8 +2,8 @@
 
 ## Author
 
-<!-- Insert Your Name Here -->
+@kp-dhvani
 
 ## Description
 
-<!-- Describe your example here -->
+Moog Mavis does not have a noise source of its own. Use the daisy pod to generate white noise and feed it into Mavis.
