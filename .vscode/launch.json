@@ -1,0 +1,43 @@
+{
+  "configurations": [
+    {
+      "configFiles": [
+        "interface/stlink.cfg",
+        "target/stm32h7x.cfg"
+      ],
+      "cwd": "${workspaceFolder}",
+      "debuggerArgs": [
+        "-d",
+        "${workspaceRoot}"
+      ],
+      "executable": "${workspaceRoot}/build/noise.elf",
+      "interface": "swd",
+      "name": "Cortex Debug",
+      "openOCDLaunchCommands": [
+        "init",
+        "reset init"
+      ],
+      "preLaunchTask": "build_all_debug",
+      "preRestartCommands": [
+        "load",
+        "enable breakpoint",
+        "monitor reset"
+      ],
+      "request": "launch",
+      "runToMain": true,
+      "servertype": "openocd",
+      "showDevDebugOutput": true,
+      "svdFile": "${workspaceRoot}/.vscode/STM32H750x.svd",
+      "type": "cortex-debug"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/ashirogi/Documents/sound/daisy-examples/my-projects/noise",
+      "program": "/Users/ashirogi/Documents/sound/daisy-examples/my-projects/noise/build/Debug/outDebug"
+    }
+  ],
+  "version": "0.2.0"
+}
